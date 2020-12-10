@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
+    <style> .number { top: 13px; left: 5.5px; } </style>
+    <title>Créé par @hugolgc</title>
+  </head>
+  <body class="min-h-screen bg-gray-900 flex justify-center items-center">
+
+
+    <header class="hidden">
+      <div class="relative mx-4">
+        <img class="h-12" src="boat.png" alt="Bateau 6 cases">
+        <p class="absolute number text-white">6</p>
+        <p class="text-center text-green-600 font-bold">x1</p>
+      </div>
+      <div class="relative mx-4">
+        <img class="h-12" src="boat.png" alt="Bateau 6 cases">
+        <p class="absolute number text-white">4</p>
+        <p class="text-center text-green-600 font-bold">x2</p>
+      </div>
+      <div class="relative mx-4">
+        <img class="h-12" src="boat.png" alt="Bateau 6 cases">
+        <p class="absolute number text-white">3</p>
+        <p class="text-center text-green-600 font-bold">x3</p>
+      </div>
+      <div class="relative mx-4">
+        <img class="h-12" src="boat.png" alt="Bateau 6 cases">
+        <p class="absolute number text-white">2</p>
+        <p class="text-center text-green-600 font-bold">x4</p>
+      </div>
+    </header>
+
+
+    <form id="form">
+      <input id="pseudo" type="text" name="start" placeholder="Vous" required minlength="4" maxlength="40" class="block h-12 w-64 px-4 bg-gray-800 text-white rounded">
+      <input id="adversaire" type="text" name="start" placeholder="Adversaire" required minlength="4" maxlength="40" class="block h-12 w-64 px-4 bg-gray-800 text-white rounded my-4">
+      <button class="block h-12 w-64 bg-green-600 text-white font-semibold rounded">Jouer</button>
+    </form>
+
+
+    <main class="hidden">
+      <div id="target" class="grid grid-cols-10 mx-16">
+      </div>
+      <div id="board" class="grid grid-cols-10 mx-16"></div>
+    </main>
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="main.js"></script>
+  </body>
+</html>
